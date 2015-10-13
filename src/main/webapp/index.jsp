@@ -10,14 +10,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+        
+        body {
+            background-image: url("http://i.imgur.com/b80uodc.png");
+        }
+        </style>
         <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <header>
-            <h1>InstaGrim ! </h1>
-            <h2>Your world in Black and White</h2>
+                <div id='header'>
+                    INSTAGRIM
+                </div> 
+            <div id='banner'>THE WORLD THROUGH THE EYES OF OTHERS</div>
         </header>
         <nav>
             <ul>
