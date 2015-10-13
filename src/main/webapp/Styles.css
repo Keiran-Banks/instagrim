@@ -9,8 +9,51 @@ and open the template in the editor.
 */
 
 
-nav {
-    text-align: left;
-    border: 2px;
-    float: right;
+
+
+
+#header{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 400%;
+    position: relative;
+    
 }
+
+#banner{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: "Freestyle Script";
+    font-size: 200%;
+
+}
+
+#Upload{
+    position: relative;
+    top: 50px;
+    cursor:pointer;
+    width:400px;
+    height:400px;
+    float:left;
+    border: 3px solid #FFF;    
+}
+
+#Upload{
+    
+    background-image: url('http://i.imgur.com/ruWDeji.jpg');
+    
+}
+
+#Upload:hover{
+    
+
+    background-image: url('http://i.imgur.com/16D4xyP.jpg');
+    
+    
+    
+    
+}
+
