@@ -27,7 +27,7 @@ public class User {
         
     }
     
-    public boolean RegisterUser(String username, String Password){
+    public boolean RegisterUser(String username, String first_name, String last_name, String Password){
         AeSimpleSHA1 sha1handler=  new AeSimpleSHA1();
         String EncodedPassword=null;
         try {
@@ -37,12 +37,12 @@ public class User {
             return false;
         }
         Session session = cluster.connect("instagrim");
-        PreparedStatement ps = session.prepare("insert into userprofiles (login,password) Values(?,?)");
+        PreparedStatement ps = session.prepare("insert into userprofiles (login, first_name, last_name, password) Values(?,?,?,?)");
        
         BoundStatement boundStatement = new BoundStatement(ps);
         session.execute( // this is where the query is executed
                 boundStatement.bind( // here you are binding the 'boundStatement'
-                        username,EncodedPassword));
+                        username, first_name, last_name, EncodedPassword));
         //We are assuming this always works.  Also a transaction would be good here !
         
         return true;
@@ -65,7 +65,7 @@ public class User {
                 boundStatement.bind( // here you are binding the 'boundStatement'
                         username));
         if (rs.isExhausted()) {
-            System.out.println("No Images returned");
+            System.out.println("WRONG PASSWORD/USERNAME");
             return false;
         } else {
             for (Row row : rs) {
@@ -74,14 +74,96 @@ public class User {
                 if (StoredPass.compareTo(EncodedPassword) == 0)
                     return true;
             }
+            
         }
-   
-    
-    return false;  
+        return false;
     }
-       public void setCluster(Cluster cluster) {
+            
+    public boolean updateProfileDescription(String username, String profileDescription)
+    {
+        Session session = cluster.connect("instagrim");
+        PreparedStatement ps = session.prepare("update userprofiles set profiledescription=? where login =?");
+        ResultSet rs = null;
+        BoundStatement boundStatement = new BoundStatement(ps);
+        rs = session.execute(
+            boundStatement.bind(
+                profileDescription, username));
+    return true; 
+    }
+    
+    
+    public String getFirstName(String username)
+        {
+            
+            String NoResult = "No User Data Available";
+            String firstName = "";
+            
+            Session session = cluster.connect("instagrim");
+            PreparedStatement ps = session.prepare("select * from userprofiles where login =?");
+            ResultSet rs = null;
+            BoundStatement boundStatement = new BoundStatement(ps);
+            rs = session.execute(
+                boundStatement.bind(
+                        username)
+            );
+            
+            if (rs.isExhausted()) {
+                System.out.println("No Profile Available");
+                return NoResult;
+            } else {
+                for (Row row : rs) {
+                    firstName = row.getString("first_name");
+                }
+                
+                return firstName;
+                
+            }
+        }
+            
+    
+    public String getLastName(String username)
+    {
+        String NoResult = "No User Data Available";
+        
+        Session session = cluster.connect("instagrim");
+        PreparedStatement ps = session.prepare("select * from userprofile where login =?");
+        ResultSet rs = null;
+        BoundStatement boundStatement = new BoundStatement(ps);
+        
+        rs = session.execute(
+            boundStatement.bind(
+                username));
+        
+        if(rs.isExhausted()) {
+            System.out.println("No Profile Available");
+        } else {
+            for (Row row : rs) {
+                String lastName = row.getString("last_name");
+                return lastName;
+            }
+        }
+        return NoResult;
+    }
+    
+    public void setCluster(Cluster cluster) {
         this.cluster = cluster;
     }
 
     
-}
+}    
+            
+            
+            
+            
+            
+            
+        
+            
+            
+
+   
+        
+    
+     
+
+

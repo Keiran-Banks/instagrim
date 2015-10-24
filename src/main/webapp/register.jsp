@@ -8,31 +8,49 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+           body{
+            background-image: url("http://i.imgur.com/b80uodc.png");
+            background-attachment: fixed;
+           }
+        </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
     </head>
     <body>
         <header>
-        <h1>InstaGrim ! </h1>
-        <h2>Your world in Black and White</h2>
+            <div id="header">INSTAGRIM</div>
+        <div id="banner">THE WORLD THROUGH THE EYES OF OTHERS</div>
+        </br>
         </header>
         <nav>
             <ul>
                 
-                <li><a href="/Instagrim/Images/majed">Sample Images</a></li>
+                <!--<div><a href="/Instagrim/Images/majed">Sample Images</a></div>-->
             </ul>
         </nav>
        
-        <article>
-            <h3>Register as user</h3>
+        <article id="LeftPadding">
+            <h3 id="Join">JOIN THE WORLD OF INSTAGRIM</h3>
             <form method="POST"  action="Register">
-                <ul>
-                    <li>User Name <input type="text" name="username"></li>
-                    <li>Password <input type="password" name="password"></li>
-                </ul>
-                <br/>
-                <input type="submit" value="Regidter"> 
+            
+                    <div id="Username">User Name <input id="UsernameEnter" type="text" name="username"></div>
+                    </br>
+                    <!--<div id="Addresses">Address <input id="AddressesEnter" type="text" name="addresses"></div>
+                    </br>-->
+                    <div id="Email">Email <input id="EmailEnter" type="text" name="email"></div>
+                    </br>
+                    <div id="Password">Password <input id="PasswordEnter" type="password" name="password"></div>
+                    </br>
+                    <div id="FirstName">First Name <input id="FirstNameEnter" type="text" name="first_name"></div>
+                    </br>
+                    <div id="LastName">Last Name <input id="LastNameEnter" type="text" name="last_name"></div>
+             
+                    </br>
+                    </br>
+
+                    <div id="RegisterBtn1"><input id="RegisterBtn" type="submit" value="Register"></div>
             </form>
 
         </article>

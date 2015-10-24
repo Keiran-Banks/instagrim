@@ -57,3 +57,329 @@ and open the template in the editor.
     
 }
 
+#Login{
+    
+    position: relative;
+    top: 50px;
+    cursor:pointer;
+    width:400px;
+    height:400px;
+    float:left;
+    border: 3px solid #FFF; 
+    
+}
+
+#Login{
+    
+    background-image: url('http://i.imgur.com/aa0z57W.jpg');
+    
+}
+
+#Login:hover{
+    
+    background-image: url('http://i.imgur.com/nzLe3ZI.jpg');
+    
+}
+
+#Register{
+    position: relative;
+    top: 50px;
+    cursor:pointer;
+    width:400px;
+    height:400px;
+    float:left;
+    border: 3px solid #FFF;    
+}
+
+#Register{
+    
+    background-image: url('http://i.imgur.com/N22mxQ0.jpg');
+    
+}
+
+#Register:hover{
+    
+    background-image: url('http://i.imgur.com/fAxrU5t.jpg');
+    
+}
+
+
+.footer{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: Arial;
+    position: fixed;
+    bottom: 0;
+    
+}
+
+#Join{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: "Freestyle Script";
+    font-size: 300%;
+    
+}
+
+#RegisterBtn{
+    
+    font-size: 150%;
+    text-align: center;
+    background-color: transparent;
+    color: #F3F9FF;
+    border: none;
+    cursor: pointer;
+    font-family: "Freestyle Script";
+    
+}
+
+#RegisterBtn1{
+    
+    font-size: 250%;
+    text-align: center;
+    background-color: transparent;
+    color: #F3F9FF;
+    
+    
+    
+}
+
+#LeftPadding{
+    
+    margin: auto;
+    width: 50%;
+    border:3px solid #F3F9FF;
+    padding: 10px;
+    
+}
+
+#Username{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 200%;
+    
+}
+
+#Password{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 200%;
+    
+}
+
+#PasswordEnter{
+    
+    background-color: transparent;
+    border: 2px solid #F3F9FF;
+    text-align: center;
+    font-size: 150%;
+    color: #F3F9FF;
+}
+
+#UsernameEnter{
+    
+    background-color: transparent;
+    border: 2px solid #F3F9FF;
+    text-align: center;
+    font-size: 150%;
+    color: #F3F9FF;
+}
+
+#LoginArticle{
+    
+    margin: auto;
+    width: 50%;
+    border:3px solid #F3F9FF;
+    padding: 10px;
+    
+}
+
+#UploadFile{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: "Freestyle Script";
+    font-size: 200%;
+    
+}
+
+#uploadbanner{
+    
+    color: #F3F9FF;
+    text-align: center;
+    float: left;
+    font-family: "Freestyle Script";
+    font-size: 300%;
+    text-decoration: none;
+    
+}
+
+.NavBtn{
+    
+    color: #F3F9FF;
+    text-align: center;
+    float: left;
+    font-family: "Freestyle Script";
+    font-size: 200%;
+    
+}
+
+#Profile{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: "Freestyle Script";
+    font-size: 200%;
+    
+}
+
+#LoginPage{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: "Freestyle Script";
+    font-size: 200%;
+    
+}
+
+#LogOut{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: "Freestyle Script";
+    font-size: 300%;
+    float: right;
+    text-decoration: none;
+    
+}
+
+#InstagrimFeed{
+    
+    text-align: center;
+    
+    
+}
+
+#FirstName{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 200%;
+}
+
+#FirstNameEnter{
+    
+    background-color: transparent;
+    border: 2px solid #F3F9FF;
+    text-align: center;
+    font-size: 150%;
+    color: #F3F9FF;
+}
+
+#LastName{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 200%;
+}
+
+#LastNameEnter{
+    
+    background-color: transparent;
+    border: 2px solid #F3F9FF;
+    text-align: center;
+    font-size: 150%;
+    color: #F3F9FF;
+}
+
+#YourImages{
+    
+    position: relative;
+    top: 50px;
+    cursor:pointer;
+    width:400px;
+    height:400px;
+    float:left;
+    border: 3px solid #FFF;   
+    
+}
+
+#YourImages{
+    
+    background-image: url('http://i.imgur.com/F1MuVuV.jpg');
+    
+}
+
+#YourImages:hover{
+
+    background-image: url('http://i.imgur.com/DrJB3uO.jpg');
+    
+}
+
+#UserProfile{
+    
+    position: relative;
+    top: 50px;
+    cursor:pointer;
+    width:400px;
+    height:400px;
+    float:left;
+    border: 3px solid #FFF;   
+    
+}
+
+#UserProfile{
+    
+    background-image: url('http://i.imgur.com/VOEiTQh.jpg');
+    
+}
+
+#UserProfile:hover{
+
+    background-image: url('http://i.imgur.com/twyXtG8.jpg');
+    
+}
+
+#Addresses{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 200%;
+    
+}
+
+#AddressesEnter{
+    
+    background-color: transparent;
+    border: 2px solid #F3F9FF;
+    text-align: center;
+    font-size: 150%;
+    color: #F3F9FF;
+}
+
+#Email{
+    
+    color: #F3F9FF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 200%;
+    
+}
+
+#EmailEnter{
+    
+    background-color: transparent;
+    border: 2px solid #F3F9FF;
+    text-align: center;
+    font-size: 150%;
+    color: #F3F9FF;
+}

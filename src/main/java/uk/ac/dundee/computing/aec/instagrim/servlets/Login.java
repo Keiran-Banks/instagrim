@@ -50,6 +50,9 @@ public class Login extends HttpServlet {
         
         String username=request.getParameter("username");
         String password=request.getParameter("password");
+        //String first_name=request.getParameter("first_name");
+        //String last_name=request.getParameter("last_name");
+        
         
         User us=new User();
         us.setCluster(cluster);

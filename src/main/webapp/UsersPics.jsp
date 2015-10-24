@@ -14,22 +14,28 @@
         <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="/Instagrim/Styles.css" />
     </head>
+    <style>
+        body{
+            background-image: url("http://i.imgur.com/b80uodc.png");
+            background-attachment: fixed;
+           }
+    </style>
     <body>
         <header>
         
-        <h1>InstaGrim ! </h1>
-        <h2>Your world in Black and White</h2>
+        <div id="header">INSTAGRIM</div>
+        <div id="banner">THE WORLD THROUGH THE EYES OF OTHERS</div>
         </header>
         
         <nav>
-            <ul>
-                <li class="nav"><a href="/Instagrim/upload.jsp">Upload</a></li>
-                <li class="nav"><a href="/Instagrim/Images/majed">Sample Images</a></li>
-            </ul>
+            
+                <div class="uploadbanner"><a id="uploadbanner" href="/Instagrim/upload.jsp">UPLOAD</a></div>
+                <div class="LogOut"><a id="LogOut" href="Instagrim/Logout.jsp">LOG OUT</a></div>
+            
         </nav>
  
-        <article>
-            <h1>Your Pics</h1>
+        <article id="InstagrimFeed">
+            <!--<div id="Profile"></div>-->
         <%
             java.util.LinkedList<Pic> lsPics = (java.util.LinkedList<Pic>) request.getAttribute("Pics");
             if (lsPics == null) {
@@ -41,12 +47,13 @@
             iterator = lsPics.iterator();
             while (iterator.hasNext()) {
                 Pic p = (Pic) iterator.next();
+                
 
         %>
-        <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/><%
+                <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/><%
 
-            }
-            }
+                                        }
+                }
         %>
         </article>
         <footer>

@@ -45,12 +45,19 @@ public class Register extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String username=request.getParameter("username");
+        String addresses=request.getParameter("addresses");
+        String email=request.getParameter("email");
+        String first_name=request.getParameter("first_name");
+        String last_name=request.getParameter("last_name");
         String password=request.getParameter("password");
+        
+        
         
         User us=new User();
         us.setCluster(cluster);
-        us.RegisterUser(username, password);
+        boolean WhatHappened = us.RegisterUser(username, first_name, last_name, password);
         
 	response.sendRedirect("/Instagrim");
         

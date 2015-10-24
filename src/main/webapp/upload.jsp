@@ -7,28 +7,37 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    
     <head>
+        
+        <style>
+           body{
+            background-image: url("http://i.imgur.com/b80uodc.png");
+            background-attachment: fixed;
+           }
+        </style>
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
     </head>
     <body>
-        <h1>InstaGrim ! </h1>
-        <h2>Your world in Black and White</h2>
+        <div id="header">INSTAGRIM</div>
+        <div id="banner">THE WORLD THROUGH THE EYES OF OTHERS</div>
         <nav>
-            <ul>
-                <li class="nav"><a href="upload.jsp">Upload</a></li>
-                <li class="nav"><a href="/Instagrim/Images/majed">Sample Images</a></li>
-            </ul>
+            
+                <div class="NavBtn"><a href="upload.jsp">Upload</a></div>
+                <div class="NavBtn"><a href="/Instagrim/Images/majed">Sample Images</a></div>
+            
         </nav>
  
-        <article>
-            <h3>File Upload</h3>
+        <article id="LoginArticle">
+            <div id="UploadFile">UPLOAD A PHOTO</div>
             <form method="POST" enctype="multipart/form-data" action="Image">
                 File to upload: <input type="file" name="upfile"><br/>
 
                 <br/>
-                <input type="submit" value="Press"> to upload the file!
+                <div id="RegisterBtn1" ><input id="RegisterBtn" type="submit" value="UPLOAD"></div>
             </form>
 
         </article>

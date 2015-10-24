@@ -13,27 +13,32 @@
         <link rel="stylesheet" type="text/css" href="Styles.css" />
 
     </head>
+    <style>
+        body{
+            background-image: url("http://i.imgur.com/b80uodc.png");
+            background-attachment: fixed;
+           }
+    </style>
     <body>
         <header>
-        <h1>InstaGrim ! </h1>
-        <h2>Your world in Black and White</h2>
+        <div id="header">INSTAGRIM</div>
+        <div id="banner">THE WORLD THROUGH THE EYES OF OTHERS</div>
         </header>
         <nav>
-            <ul>
-                
-                <li><a href="/Instagrim/Images/majed">Sample Images</a></li>
-            </ul>
         </nav>
        
-        <article>
-            <h3>Login</h3>
+        </br>
+        
+        <article id="LeftPadding">
+            
             <form method="POST"  action="Login">
                 <ul>
-                    <li>User Name <input type="text" name="username"></li>
-                    <li>Password <input type="password" name="password"></li>
+                    <div id="Username">User Name <input id="UsernameEnter" type="text" name="username"></div>
+                    </br>
+                    <div id="Password">Password <input id="PasswordEnter" type="password" name="password"></div>
                 </ul>
                 <br/>
-                <input type="submit" value="Login"> 
+                <div id="RegisterBtn1"><input id="RegisterBtn" type="submit" value="LOGIN"></div>
             </form>
 
         </article>
