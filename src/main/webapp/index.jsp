@@ -42,14 +42,14 @@
 
                 <a href="UserProfile.jsp"><div href="UserProfile.jsp" id="UserProfile" title="Profile"></div></a>
                 
-                <a href="/Instagrim/Images/<%=lg.getUsername()%>"><div href="/Instagrim/Images/<%=lg.getUsername()%>" id="YourImages" title="YourImages"</div></a>
+                <a><a id="YourImages" href="/Instagrim/Images/<%=lg.getUsername()%>"></a></a>
                     <%}
                         }else{
                     %>
                   
                 <a href="register.jsp"><div href="register.jsp" id="Register" title="Register"></div></a>
                 
-                 <a href="login.jsp"><div href="login.jsp" id="Login" title="Login"</div></a>    
+                <a href="login.jsp"><div href="login.jsp" id="Login" title="Register"></div></a>   
                 
                 <%}%>
                 
