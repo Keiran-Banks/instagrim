@@ -14,7 +14,7 @@
         <style>
            body{
             background-image: url("http://i.imgur.com/b80uodc.png");
-            background-repeat: no-repeat;
+            background-attachment: fixed;
            }
         </style>
         
@@ -33,16 +33,20 @@
                 
                
                     <%
-                        String username = (String)session.getAttribute("username");
+                        
+                        
                         LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
-                        if (lg.getlogedin()) 
-                        {
+                        String Username = lg.getUsername();
+                        String firstName = lg.getFirstName();
+                        if (lg != null) {
+                            
+                            if (lg.getlogedin()) {
                                 %>
                             
                                 <div class="uploadbanner"><a id="uploadbanner" href="/Instagrim/upload.jsp">UPLOAD</a></div>
                                 <div class="LogOut"><a id="LogOut" href="LogOut.jsp">LOG OUT</a></div>
                                 </br></br>
-                          <%
+                          <%}
                             }else{
                           %>
                                 <div class="RegisterBtn1"><a id="RegisterBtn1" href="/Instagrim/register.jsp">REGISTER</a></div>
@@ -54,18 +58,25 @@
         <article>
             <%
                 
-                String firstName = (String)session.getAttribute("firstName");
-                String lastName = (String)session.getAttribute("lastName");
+                
+
+                
+                String lastName = (String)session.getAttribute("last_name");
                 String email = (String)session.getAttribute("email");
                 String profileDescription = (String)session.getAttribute("profileDescription");
-                        %>
-            <h1><%=username%>'s Profile!</h1>
-       
-        <h3>Username: <%=username%></h3>
-        <h3>First name: <%=firstName%></h3>
-        <h3>Last name: <%=lastName%></h3>
-        <h3>Email: <%=email%></h3>
-        <h3><%=username%>'s Profile description: <%=profileDescription%></h3>
+                
+            %>
+                        
+        <div id="ProfileHeader"><%=Username%>'s Profile!</div>
+        </br>
+        <div id="Profile1">Username: <%=Username%></div>
+        </br>
+        <div id="Profile1">First name: <%=firstName%></div>
+        </br>
+        <div id="Profile1">Last name: <%=lastName%></div>
+        </br>
+        <div id="Profile1">Email: <%=email%></div>
+        
         
         </article>
         <footer>
